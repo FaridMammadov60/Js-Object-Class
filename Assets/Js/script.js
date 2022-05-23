@@ -48,8 +48,21 @@ class CustomArray {
         this.arr[counter] = a;
         return this.arr;
     }
-   
+    finds(a) {
+        for (let i = 0; i < this.arr.length; i++) {
+            if (a == this.arr[i]) {
+                return this.arr[i];
+            }
+        }
+        return -1;
+    }
+
 }
 let array = new CustomArray([1, 2, 5, 3]);
 array.add(7);
 console.log(array);
+
+console.log(array.finds(3));
+
+
+
