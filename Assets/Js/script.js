@@ -4,37 +4,52 @@
 //(riyazi prinsibi unudun,vurma bolme onceliyine ehtiyac yoxdu) 39 olmalidi
 
 class CustomMatch {
-    constructor(a) {
-        this.a = a;
+    constructor(number) {
+        this.number = number;
     }
-    plus(a) {
-        this.a = this.a + a;
+    plus(number) {
+        this.number = this.number + number;
         return this;
     }
-    minus(a) {
-        this.a = this.plus - a;
+    minus(number) {
+        this.number = this.plus - number;
         return this;
     }
-    multiply(a) {
-        this.a = this.a * a;
+    multiply(number) {
+        this.number = this.number * number;
         return this;
     }
-    divide(a) {
-        this.a = this.a / a;
+    divide(number) {
+        this.number = this.number / number;
         return this;
     }
     toString() {
-        return this.a;
+        return this.number;
     }
 
 }
 let result = new CustomMatch(50).plus(6).minus(30).multiply(3).divide(2);
 
+console.log(result);
 console.log(result.toString());
-
-
-
-
 
 //2) Custom bir array classi yaradin. Hemin arrayin find ve push metodu olsun. Taski ishleyib turn in edin.
 
+
+class CustomArray {
+    constructor(arr) {
+        this.arr = arr;
+    }
+    add(a) {
+        let counter = 0;
+        for (let i = 0; i < this.arr.length; i++) {
+            counter++;
+        }
+        this.arr[counter] = a;
+        return this.arr;
+    }
+   
+}
+let array = new CustomArray([1, 2, 5, 3]);
+array.add(7);
+console.log(array);
