@@ -12,7 +12,7 @@ class CustomMatch {
         return this;
     }
     minus(number) {
-        this.number = this.plus - number;
+        this.number = this.number - number;
         return this;
     }
     multiply(number) {
